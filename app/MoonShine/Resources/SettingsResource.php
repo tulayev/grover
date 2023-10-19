@@ -21,7 +21,8 @@ class SettingsResource extends Resource
 	{
 		return [
 		    ID::make()->sortable(),
-            Text::make('Key', 'key'),
+            Text::make('Key', 'key')
+                ->locked(),
             Translatable::make('Value', 'value')
                 ->priorityLanguages(array_keys(config('locales')))
                 ->removable(),

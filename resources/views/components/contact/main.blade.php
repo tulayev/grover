@@ -38,7 +38,17 @@
             </div>
             <div>
                 <div class="info__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6002.513750409236!2d69.23761184257856!3d41.216172295349395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae60fcf2af0dcd%3A0x72d45eb7de954541!2z0JzQsNGB0YHQuNCyINCh0LXRgNCz0LXQu9C4LCDQmtCy0LDRgNGC0LDQuyA0!5e0!3m2!1sru!2s!4v1697472759031!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    @if ($settings->where('key', 'map')->first()->url)
+                        <iframe 
+                            src="{{ $settings->where('key', 'map')->first()->url }}" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    @endif
                 </div>
             </div>    
         </div>   

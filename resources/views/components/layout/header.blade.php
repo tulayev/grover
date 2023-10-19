@@ -11,9 +11,9 @@
                         <div>
                             <h3>FOR COMPANIES</h3>
                             <ul>
-                                <li>
+                                {{-- <li>
                                     <a href="#">Investing</a>
-                                </li>
+                                </li> --}}
                                 <li>
                                     <a href="{{ route('service.distribution') }}">Distrubution</a>
                                 </li>
@@ -31,9 +31,9 @@
                                 <li>
                                     <a href="{{ route('service.construction') }}">Construction</a>
                                 </li>
-                                <li>
+                                {{-- <li>
                                     <a href="#">Private investing</a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>
@@ -98,12 +98,12 @@
                                     <li>
                                         <a href="{{ route('service.battery') }}">Sun batteries</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="#">Private investing</a>
                                     </li>
                                     <li>
                                         <a href="#">Investing</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
 
                                 @if (config('locales'))
