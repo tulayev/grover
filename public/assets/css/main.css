@@ -971,6 +971,7 @@ a, a:hover {
 }
 .career__vacations > ul > li .uk-accordion-content ul {
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 .career__vacations > ul > li .uk-accordion-content ul li {
   margin-left: 15px;
@@ -1238,11 +1239,12 @@ a, a:hover {
   .career__vacations > ul > li .uk-accordion-content {
     margin-top: 14px;
   }
-  .career__vacations > ul > li .uk-accordion-content h5 {
+  .career__vacations > ul > li .uk-accordion-content p {
     padding-top: 24px;
   }
   .career__vacations > ul > li .uk-accordion-content ul {
     margin-top: 20px;
+    margin-bottom: 30px;
   }
   .career__vacations > ul > li .uk-accordion-content ul li {
     margin-left: 20px;
@@ -1747,11 +1749,12 @@ a, a:hover {
   .career__vacations > ul > li .uk-accordion-content {
     margin-top: 16px;
   }
-  .career__vacations > ul > li .uk-accordion-content h5 {
+  .career__vacations > ul > li .uk-accordion-content p {
     padding-top: 30px;
   }
   .career__vacations > ul > li .uk-accordion-content ul {
     margin-top: 30px;
+    margin-bottom: 72px;
   }
   .career__vacations > ul > li .uk-accordion-content ul li {
     margin-left: 30px;
