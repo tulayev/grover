@@ -1,9 +1,7 @@
 <x-layout.app>
 
-    <x-team.main />
+    <x-team.main :teamMembers="$teamMembers" />
 
-    <x-sections.team :members="$members" />
-
-    <x-team.career :vacations="$vacations" />
+    <x-team.career :vacations="$vacations" :teamMembers="$teamMembers" />
 
 </x-layout.app>

@@ -42,23 +42,30 @@
             @endif
         </div>
 
+        @php(
+            $hr = $teamMembers->filter(function($member) {
+                return str_contains(strtolower($member->position), 'hr');
+            })->first()
+        )
         <div class="career__contact uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
-            <div>
-                <h2 class="career__contact-title">Contact person for direction</h2>
-            </div>
-            <div>
-                <div class="career__contact-body" uk-grid>
-                    <div class="uk-width-1-3">
-                        <img src="{{ asset('assets/img/gulchehra.png') }}" alt="Gulchehra" />
-                    </div>
-                    <div class="uk-width-2-3">
-                        <h3>Shaxnoza Bahromovs</h3>
-                        <p>HR director</p>
-                        <div class="email">admin@asdasdasd</div>
-                        <div class="phone">+998 88 543-43-64</div>
+            @if ($hr)
+                <div>
+                    <h2 class="career__contact-title">Contact person for direction</h2>
+                </div>
+                <div>
+                    <div class="career__contact-body" uk-grid>
+                        <div class="uk-width-1-3">
+                            <img src="{{ asset('assets/img/gulchehra.png') }}" alt="{{ $hr->name }}" />
+                        </div>
+                        <div class="uk-width-2-3">
+                            <h3>{{ $hr->name }}</h3>
+                            <p>{{ $hr->position }}</p>
+                            <div class="email">{{ $hr->email }}</div>
+                            <div class="phone">{{ $hr->phone }}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
 </section>

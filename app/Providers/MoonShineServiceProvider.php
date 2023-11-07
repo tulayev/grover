@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\MoonShine\Resources\MemberResource;
 use App\MoonShine\Resources\PhotoResource;
+use App\MoonShine\Resources\ProjectResource;
 use App\MoonShine\Resources\SettingsResource;
 use App\MoonShine\Resources\TestimonialResource;
 use App\MoonShine\Resources\VacationResource;
@@ -38,6 +39,8 @@ class MoonShineServiceProvider extends ServiceProvider
                 ->icon('heroicons.user-group'),
             MenuItem::make('Vacations', new VacationResource())
                 ->icon('heroicons.briefcase'),
+            MenuItem::make('Projects', new ProjectResource())
+                ->icon('heroicons.home-modern'),
         ]);
     }
 }

@@ -41,7 +41,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="uk-container uk-container-large">
         <nav class="uk-navbar-container">
             <div uk-navbar>
@@ -73,7 +73,7 @@
                                         <a href="{{ route('about') }}">About us</a>
                                     </li>
                                     <li>
-                                        <a href="#">Projects</a>
+                                        <a href="{{ route('project.list') }}">Projects</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('team') }}">Team and Career</a>
@@ -110,7 +110,7 @@
                                     <ul class="uk-child-width-1-4" uk-grid>
                                         @foreach (config('locales') as $k => $v)
                                             <li>
-                                                <a 
+                                                <a
                                                     href="{{ route('changeLocale', ['locale' => $k]) }}"
                                                     class="{{ $k === app()->getLocale() ? 'active' : '' }}"
                                                 >
@@ -126,19 +126,24 @@
 
                     <ul class="uk-navbar-nav uk-visible@m">
                         <li class="header__nav-link">
-                            <a 
-                                href="{{ route('about') }}" 
+                            <a
+                                href="{{ route('about') }}"
                                 class="{{ str_contains(url()->current(), 'about') ? 'active' : '' }}"
                             >
                                 About us
                             </a>
                         </li>
                         <li class="header__nav-link">
-                            <a href="#">Projects</a>
+                            <a
+                                href="{{ route('project.list') }}"
+                                class="{{ str_contains(url()->current(), 'projects') ? 'active' : '' }}"
+                            >
+                                Projects
+                            </a>
                         </li>
                         <li class="header__nav-link">
-                            <a 
-                                href="{{ route('team') }}" 
+                            <a
+                                href="{{ route('team') }}"
                                 class="{{ str_contains(url()->current(), 'team-and-career') ? 'active' : '' }}"
                             >
                                 Team and Career
@@ -146,8 +151,8 @@
                         </li>
                         <li class="header__nav-link">
                             <a
-                                href="{{ route('contact') }}" 
-                                class="{{ str_contains(url()->current(), 'contacts') ? 'active' : '' }}" 
+                                href="{{ route('contact') }}"
+                                class="{{ str_contains(url()->current(), 'contacts') ? 'active' : '' }}"
                             >
                                 Contacts
                             </a>

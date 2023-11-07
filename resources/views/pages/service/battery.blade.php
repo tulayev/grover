@@ -4,7 +4,7 @@
 
     <x-service.battery.why />
 
-    <x-service.battery.photo :photos="$photos" />
+    <x-sections.photo :photos="$photos" />
 
     <x-sections.testimonial :testimonials="$testimonials" />
 

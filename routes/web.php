@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Artisan;
@@ -36,6 +37,11 @@ Route::prefix('services')->group(function() {
     Route::get('/distribution', [ServiceController::class, 'distribution'])->name('service.distribution');
     Route::get('/export', [ServiceController::class, 'export'])->name('service.export');
     Route::get('/battery', [ServiceController::class, 'battery'])->name('service.battery');
+});
+
+Route::prefix('projects')->group(function () {
+   Route::get('/', [ProjectController::class, 'index'])->name('project.list');
+   Route::get('/{slug}', [ProjectController::class, 'show'])->name('project.details');
 });
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');

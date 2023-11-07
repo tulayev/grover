@@ -5,8 +5,8 @@
     <x-sections.project />
 
     <x-service.construction.reliability />
-    
-    <x-service.construction.dominant />
+
+    <x-sections.dominant />
 
     <x-sections.service />
 

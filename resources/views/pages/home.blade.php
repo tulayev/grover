@@ -4,12 +4,12 @@
 
     <x-home.company />
 
-    <x-sections.project />
+    <x-sections.project :allProjects="$allProjects" :ongoingProjects="$ongoingProjects" />
 
     <x-sections.testimonial :testimonials="$testimonials" />
 
     <x-sections.service />
 
-    <x-sections.team :members="$members" :fromHomePage="true" />
+    <x-home.team :teamMembers="$teamMembers" />
 
 </x-layout.app>
