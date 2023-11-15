@@ -2,7 +2,7 @@
 
     <x-service.construction.main />
 
-    <x-sections.project />
+    <x-sections.project :allProjects="$allProjects" :ongoingProjects="$ongoingProjects" />
 
     <x-service.construction.reliability />
 
