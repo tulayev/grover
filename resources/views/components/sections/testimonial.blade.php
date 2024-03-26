@@ -1,7 +1,7 @@
 <section class="testimonial">
     <div class="uk-container uk-container-large">
-        <h2 class="testimonial__title">Testimonials</h2>
-        <h3 class="testimonial__subtitle">Hear from our clients</h3>
+        <h2 class="testimonial__title">{{ __('testimonial__title') }}</h2>
+        <h3 class="testimonial__subtitle">{{ __('testimonial__subtitle') }}</h3>
     </div>
 
     <div class="testimonial__slideshow">

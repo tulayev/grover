@@ -16,10 +16,10 @@
                     </div>
                     <div>
                         <p>
-                            {{ $project->description }}
+                            {!! $project->description !!}
                         </p>
                     </div>
-                </div>   
+                </div>
             </div>
         @endif
     </div>

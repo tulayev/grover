@@ -1,13 +1,15 @@
 <section class="project">
     <div class="uk-container uk-container-large">
         <h2 class="project__title">
-            {{ str_contains(url()->current(), 'projects') ? 'Other projects' : 'Projects' }}
+{{--            {{ str_contains(url()->current(), 'projects') ? 'Other projects' : 'Projects' }}--}}
+            {{ __('project__title') }}
         </h2>
-        
+
         <h3 class="project__subtitle">
-            We have {{ $allProjects->count() }} finished and {{ $ongoingProjects->count() }} ongoing projects
+            {{ __('project__subtitle_1') }}: {{ $allProjects->count() }}
+            {{ __('project__subtitle_2') }}: {{ $ongoingProjects->count() }}
         </h3>
-        
+
         <div class="prject__menu_wrapper uk-flex-between uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
             <div>
                 @if ($allProjects)
@@ -17,22 +19,24 @@
                                 <div>
                                     <h4>{{ $project->title }}</h4>
                                     <p>
-                                        {{ 
-                                            $project->finished_at ? 
-                                                'Finished in ' . date('Y, F', strtotime($project->finished_at)) : 
-                                                'Ongoing' 
+                                        {{
+                                            $project->finished_at ?
+                                                __('project__finished') . ' ' . date('Y, F', strtotime($project->finished_at)) :
+                                                __('project__ongoing')
                                         }}
                                     </p>
                                 </div>
                                 <div>
-                                    <a href="{{ route('project.details', ['slug' => $project->slug]) }}">Visit project</a>
+                                    <a href="{{ route('project.details', ['slug' => $project->slug]) }}">
+                                        {{ __('project__link') }}
+                                    </a>
                                 </div>
                             </li>
                         @endforeach
                     </ul>
                 @endif
                 <div class="project__link uk-flex uk-flex-middle">
-                    <a href="{{ route('project.list') }}">See all projects</a>
+                    <a href="{{ route('project.list') }}">{{ __('project_all__link') }}</a>
                     <img src="{{ asset('assets/img') }}/arrow-right-2.svg" alt="Arrow Right" />
                 </div>
             </div>

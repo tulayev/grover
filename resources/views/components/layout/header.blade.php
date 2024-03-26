@@ -15,21 +15,21 @@
                                     <a href="#">Investing</a>
                                 </li> --}}
                                 <li>
-                                    <a href="{{ route('service.distribution') }}">Distrubution</a>
+                                    <a href="{{ route('service.distribution') }}">{{ __('distribution') }}</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('service.export') }}">Export & Import</a>
+                                    <a href="{{ route('service.export') }}">{{ __('export_and_import') }}</a>
                                 </li>
-                                <li>
-                                    <a href="{{ route('service.battery') }}">Sun batteries</a>
-                                </li>
+{{--                                <li>--}}
+{{--                                    <a href="{{ route('service.battery') }}">Sun batteries</a>--}}
+{{--                                </li>--}}
                             </ul>
                         </div>
                         <div>
                             <h3>FOR INDIVIDUALS</h3>
                             <ul>
                                 <li>
-                                    <a href="{{ route('service.construction') }}">Construction</a>
+                                    <a href="{{ route('service.construction') }}">{{ __('construction') }}</a>
                                 </li>
                                 {{-- <li>
                                     <a href="#">Private investing</a>
@@ -70,10 +70,10 @@
                                 <button class="uk-offcanvas-close" type="button" uk-close></button>
                                 <ul class="uk-child-width-1-1 uk-grid-small" uk-grid>
                                     <li>
-                                        <a href="{{ route('about') }}">About us</a>
+                                        <a href="{{ route('about') }}">{{ __('home_company__item_4_title') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('project.list') }}">Projects</a>
+                                        <a href="{{ route('project.list') }}">{{ __('project__title') }}</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('team') }}">Team and Career</a>
@@ -87,17 +87,17 @@
 
                                 <ul class="uk-child-width-1-1 uk-grid-small" uk-grid>
                                     <li>
-                                        <a href="{{ route('service.construction') }}">Construction</a>
+                                        <a href="{{ route('service.construction') }}">{{ __('construction') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('service.distribution') }}">Distrubution</a>
+                                        <a href="{{ route('service.distribution') }}">{{ __('distribution') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('service.export') }}">Export & Import</a>
+                                        <a href="{{ route('service.export') }}">{{ __('export_and_import') }}</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('service.battery') }}">Sun batteries</a>
-                                    </li>
+{{--                                    <li>--}}
+{{--                                        <a href="{{ route('service.battery') }}">Sun batteries</a>--}}
+{{--                                    </li>--}}
                                     {{-- <li>
                                         <a href="#">Private investing</a>
                                     </li>
@@ -130,7 +130,7 @@
                                 href="{{ route('about') }}"
                                 class="{{ str_contains(url()->current(), 'about') ? 'active' : '' }}"
                             >
-                                About us
+                                {{ __('home_company__item_4_title') }}
                             </a>
                         </li>
                         <li class="header__nav-link">
