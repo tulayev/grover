@@ -19,11 +19,15 @@
                                 <div>
                                     <h4>{{ $project->title }}</h4>
                                     <p>
-                                        {{
-                                            $project->finished_at ?
-                                                __('project__finished') . ' ' . Date::parse($project->finished_at)->format('Y, F') :
-                                                __('project__ongoing')
-                                        }}
+                                        @if ($project->finished_at)
+                                            {{
+                                                app()->getLocale() == 'uz'
+                                                    ? __('project__finished') . ' ' . ucfirst(\App\Helpers\TextHelper::transliterate(Date::parse($project->finished_at)->format('F, Y')))
+                                                    : __('project__finished') . ' ' . Date::parse($project->finished_at)->format('F, Y')
+                                            }}
+                                        @else
+                                            {{ __('project__ongoing') }}
+                                        @endif
                                     </p>
                                 </div>
                                 <div>
