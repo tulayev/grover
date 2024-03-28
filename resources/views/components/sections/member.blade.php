@@ -1,4 +1,3 @@
-
 @if ($teamMembers)
     <div class="team__card_wrapper uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
         @php($i = 1)

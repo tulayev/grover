@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\MoonShineServiceProvider::class,
         Translator\Framework\TranslatorServiceProvider::class,
+        Jenssegers\Date\DateServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -185,6 +186,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Date' => Jenssegers\Date\Date::class,
     ])->toArray(),
 
 ];

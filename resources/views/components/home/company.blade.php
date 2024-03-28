@@ -5,7 +5,7 @@
                 <h2>{{ __('home_company__title') }}</h2>
             </div>
             <div>
-                <p>
+                <p class="uk-text-uppercase">
                     {{ __('home_company__text') }}
                 </p>
             </div>

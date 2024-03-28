@@ -1,21 +1,13 @@
 <section class="career">
     <div class="uk-container uk-container-large">
-        <h2 class="career__title">Career</h2>
+        <h2 class="career__title">{{ __('career__title') }}</h2>
 
         <h3 class="career__subtitle">
-            <div>
-                Grover values its team and
-            </div>
-            <div>
-                <span>offers</span> its employees comfortable
-            </div>
-            <div>
-                working conditions.
-            </div>
+            {!! __('career__subtitle') !!}
         </h3>
 
         <div class="career__vacations">
-            <h4>All postions</h4>
+            <h4>{{ __('vacations__title') }}</h4>
             @if ($vacations)
                 <ul uk-accordion>
                     @foreach ($vacations as $vacation)
@@ -50,7 +42,7 @@
         <div class="career__contact uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
             @if ($hr)
                 <div>
-                    <h2 class="career__contact-title">Contact person for direction</h2>
+                    <h2 class="career__contact-title">{{ __('vacations__subtitle') }}</h2>
                 </div>
                 <div>
                     <div class="career__contact-body" uk-grid>

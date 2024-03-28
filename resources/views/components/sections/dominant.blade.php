@@ -1,13 +1,13 @@
 <section class="construction__dominant">
     <div class="uk-container uk-container-large">
-        <h2 class="construction__dominant__title">Our dominant sides are:</h2>
+        <h2 class="construction__dominant__title">{{ __('construction__dominant__title') }}</h2>
         <div class="construction__dominant__blocks uk-child-width-1-2 uk-child-width-1-4@m uk-grid-collapse" uk-grid>
             <div class="construction__dominant__block">
                 <div class="uk-flex uk-flex-center uk-flex-middle">
                     01
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_1') }}
                 </p>
             </div>
             <div class="construction__dominant__block">
@@ -15,7 +15,7 @@
                     02
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_2') }}
                 </p>
             </div>
             <div class="construction__dominant__block">
@@ -23,7 +23,7 @@
                     03
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_3') }}
                 </p>
             </div>
             <div class="construction__dominant__block">
@@ -31,7 +31,7 @@
                     04
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_4') }}
                 </p>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     05
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_5') }}
                 </p>
             </div>
             <div class="construction__dominant__block">
@@ -49,7 +49,7 @@
                     06
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_6') }}
                 </p>
             </div>
             <div class="construction__dominant__block">
@@ -57,7 +57,7 @@
                     07
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_7') }}
                 </p>
             </div>
             <div class="construction__dominant__block">
@@ -65,7 +65,7 @@
                     08
                 </div>
                 <p>
-                    Download the file to learn about what kinda products we can export and import for your country and company
+                    {{ __('construction_dominant__block_text_8') }}
                 </p>
             </div>
         </div>

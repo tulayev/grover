@@ -2,8 +2,8 @@
     <div class="uk-container uk-container-large">
         <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-between" uk-grid>
             <div class="footer__email">
-                <h2>STAY TUNED!</h2>
-                <h3>Stay up to date with the latest news of the<br />Grover.</h3>
+                <h2 class="uk-text-uppercase">{{ __('footer__title_1') }}</h2>
+                <h3>{!! __('footer__subtitle') !!}</h3>
                 <form action="#" autocomplete="off">
                     <div class="form__group">
                         <input type="email" class="form__field" placeholder="Email" name="email" id="email" autocomplete="off" />
@@ -12,14 +12,14 @@
                     </div>
                     <div class="form__group uk-flex uk-flex-middle">
                         <input type="checkbox" id="privacyFooter" class="form__checkbox" />
-                        <label for="privacyFooter" class="checkbox__label">I agree with the Privacy Policy</label>
+                        <label for="privacyFooter" class="checkbox__label">{{ __('privacy_policy__text') }}</label>
                     </div>
                 </form>
             </div>
-            
+
             <div class="footer__menu uk-child-width-1-2 uk-child-width-1-1@s" uk-grid>
                 <div class="uk-margin-auto">
-                    <h2>MENU</h2>
+                    <h2 class="uk-text-uppercase">{{ __('footer__title_2') }}</h2>
                     <ul>
                         <li>
                             <a href="{{ route('about') }}">About us</a>
@@ -36,10 +36,10 @@
                     </ul>
                 </div>
                 <div class="footer__menu-social uk-margin-auto">
-                    <h2>SOCIAL NETWORKS</h2>
+                    <h2 class="uk-text-uppercase">{{ __('footer__title_3') }}</h2>
                     <ul>
                         <li>
-                            <a 
+                            <a
                                 href="#"
                                 target="_blank"
                             >
@@ -47,7 +47,7 @@
                             </a>
                         </li>
                         <li>
-                            <a 
+                            <a
                                 href="#"
                                 target="_blank"
                             >
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li>
-                            <a 
+                            <a
                                 href="#"
                                 target="_blank"
                             >
@@ -63,7 +63,7 @@
                             </a>
                         </li>
                         <li>
-                            <a 
+                            <a
                                 href="#"
                                 target="_blank"
                             >
@@ -71,7 +71,7 @@
                             </a>
                         </li>
                         <li>
-                            <a 
+                            <a
                                 href="#"
                                 target="_blank"
                             >
@@ -81,9 +81,9 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer__contact">
-                <h2>CONTACTS</h2>
+                <h2 class="uk-text-uppercase">{{ __('contacts__title') }}</h2>
                 <ul>
                     @if ($settings->where('key', 'address')->first()->value)
                         <li>

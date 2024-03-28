@@ -21,7 +21,7 @@
                                     <p>
                                         {{
                                             $project->finished_at ?
-                                                __('project__finished') . ' ' . date('Y, F', strtotime($project->finished_at)) :
+                                                __('project__finished') . ' ' . Date::parse($project->finished_at)->format('Y, F') :
                                                 __('project__ongoing')
                                         }}
                                     </p>

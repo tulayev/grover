@@ -2,7 +2,7 @@
     <div class="uk-container uk-container-large">
         <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-grid-collapse" uk-grid>
             <div>
-                <h2 class="pdf__title">Download the PDF to learn more about <span>details</span></h2>
+                <h2 class="pdf__title">{!! __('pdf__title') !!}</h2>
             </div>
             <div>
                 <div class="pdf__blocks uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
@@ -12,7 +12,7 @@
                             PDF, 6,8mb
                         </div>
                         <p>
-                            Download the file to learn about what kinda products we can export and import for your country and company
+                            {{ __('pdf__block_text_1') }}
                         </p>
                     </div>
                     <div class="pdf__block">
@@ -21,7 +21,7 @@
                             PDF, 10,3mb
                         </div>
                         <p>
-                            Download to know the prices of the export and import to your country
+                            {{ __('pdf__block_text_2') }}
                         </p>
                     </div>
                 </div>

@@ -12,7 +12,7 @@
             <div class="construction__main__sub">
                 <div class="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
                     <div>
-                        <h2>About project</h2>
+                        <h2>{{ __('project_details__subtitle') }}</h2>
                     </div>
                     <div>
                         <p>

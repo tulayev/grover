@@ -1,6 +1,6 @@
 <section class="photo">
     <div class="uk-container uk-container-large">
-        <h2 class="photo__title">Photos</h2>
+        <h2 class="photo__title">{{ __('photo__title') }}</h2>
 
         @if ($photos)
             <div class="photo__blocks uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" uk-grid>

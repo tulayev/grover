@@ -2,7 +2,7 @@
     <h1 class="main__title">
         <div class="uk-flex uk-flex-center uk-flex-middle">
             {{ __('main_page__title') }}
-{{--            <img class="main__title-img-1 uk-visible@l" src="{{ asset('assets/img') }}/title_img_1.png" alt="Title Image 1" />--}}
+            <img class="main__title-img-1 uk-visible@l" src="{{ asset('assets/img') }}/title_img_1.png" alt="Title Image 1" />
         </div>
         <div class="uk-flex uk-flex-center uk-flex-middle">
             {{ __('main_page__subtitle') }}

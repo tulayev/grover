@@ -12,15 +12,17 @@
                                 <div>
                                     <h2>{{ $project->title }}</h2>
                                     <p>
-                                        {{ 
-                                            $project->finished_at ? 
-                                                'Finished in ' . date('Y, F', strtotime($project->finished_at)) : 
-                                                'Ongoing' 
+                                        {{
+                                            $project->finished_at ?
+                                                __('project__finished') . ' ' . Date::parse($project->finished_at)->format('Y, F') :
+                                                __('project__ongoing')
                                         }}
                                     </p>
                                 </div>
                                 <div>
-                                    <a href="{{ route('project.details', ['slug' => $project->slug]) }}">Visit project</a>
+                                    <a href="{{ route('project.details', ['slug' => $project->slug]) }}">
+                                        {{ __('project__link') }}
+                                    </a>
                                 </div>
                             </div>
                         </div>

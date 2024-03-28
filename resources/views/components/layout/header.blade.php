@@ -3,13 +3,13 @@
         <div class="uk-container uk-container-large">
             <div class="services__dropdown_content" uk-grid>
                 <div class="uk-width-1-3">
-                    <h2>Services</h2>
-                    <p>Grover provides legal services in the most complex areas of business.</p>
+                    <h2>{{ __('services__title') }}</h2>
+                    <p>{{ __('header__subtitle') }}</p>
                 </div>
                 <div class="uk-width-2-3">
                     <div class="uk-child-width-1-3" uk-grid>
                         <div>
-                            <h3>FOR COMPANIES</h3>
+                            <h3 class="uk-text-uppercase">{{ __('for_companies') }}</h3>
                             <ul>
                                 {{-- <li>
                                     <a href="#">Investing</a>
@@ -26,7 +26,7 @@
                             </ul>
                         </div>
                         <div>
-                            <h3>FOR INDIVIDUALS</h3>
+                            <h3 class="uk-text-uppercase">{{ __('for_individuals') }}</h3>
                             <ul>
                                 <li>
                                     <a href="{{ route('service.construction') }}">{{ __('construction') }}</a>
@@ -54,7 +54,7 @@
                         </li>
                         <li class="uk-visible@m">
                             <a href="#" id="servicesDropdownButton">
-                                Services
+                                {{ __('services__title') }}
                                 <img src="{{ asset('assets/img') }}/arrow-down.svg" alt="Arrow Down" />
                             </a>
                         </li>
@@ -76,14 +76,14 @@
                                         <a href="{{ route('project.list') }}">{{ __('project__title') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('team') }}">Team and Career</a>
+                                        <a href="{{ route('team') }}">{{ __('team_and_career__title') }}</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('contact') }}">Contacts</a>
+                                        <a href="{{ route('contact') }}">{{ __('contacts__title') }}</a>
                                     </li>
                                 </ul>
 
-                                <h2>Services</h2>
+                                <h2>{{ __('services__title') }}</h2>
 
                                 <ul class="uk-child-width-1-1 uk-grid-small" uk-grid>
                                     <li>
@@ -138,7 +138,7 @@
                                 href="{{ route('project.list') }}"
                                 class="{{ str_contains(url()->current(), 'projects') ? 'active' : '' }}"
                             >
-                                Projects
+                                {{ __('project__title') }}
                             </a>
                         </li>
                         <li class="header__nav-link">
@@ -146,7 +146,7 @@
                                 href="{{ route('team') }}"
                                 class="{{ str_contains(url()->current(), 'team-and-career') ? 'active' : '' }}"
                             >
-                                Team and Career
+                                {{ __('team_and_career__title') }}
                             </a>
                         </li>
                         <li class="header__nav-link">
@@ -154,7 +154,7 @@
                                 href="{{ route('contact') }}"
                                 class="{{ str_contains(url()->current(), 'contacts') ? 'active' : '' }}"
                             >
-                                Contacts
+                                {{ __('contacts__title') }}
                             </a>
                         </li>
                         <li class="header__lang-link">

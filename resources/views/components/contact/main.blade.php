@@ -1,7 +1,7 @@
 <main class="info">
     <div class="uk-container uk-container-large">
         <h1 class="info__title">
-            Contacts
+            {{ __('contacts__title') }}
         </h1>
         <div class="uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
             <div>
@@ -39,18 +39,18 @@
             <div>
                 <div class="info__map">
                     @if ($settings->where('key', 'map')->first()->url)
-                        <iframe 
-                            src="{{ $settings->where('key', 'map')->first()->url }}" 
-                            width="600" 
-                            height="450" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                        <iframe
+                            src="{{ $settings->where('key', 'map')->first()->url }}"
+                            width="600"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
                         ></iframe>
                     @endif
                 </div>
-            </div>    
-        </div>   
+            </div>
+        </div>
     </div>
 </main>
