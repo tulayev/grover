@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
         MoonshineUser::query()->create([
             'name' => 'Admin',
             'moonshine_user_role_id' => MoonshineUserRole::DEFAULT_ROLE_ID,
-            'email' => 'admin@grover.com',
-            'password' => bcrypt(env('ADMIN_PASSWORD'))
+            'email' => env('ADMIN_LOGIN', 'admin@grover.uz'),
+            'password' => bcrypt(env('ADMIN_PASSWORD', '123'))
         ]);
 
         $this->call([
