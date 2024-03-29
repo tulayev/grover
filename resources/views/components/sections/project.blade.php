@@ -1,9 +1,6 @@
 <section class="project">
     <div class="uk-container uk-container-large">
-        <h2 class="project__title">
-{{--            {{ str_contains(url()->current(), 'projects') ? 'Other projects' : 'Projects' }}--}}
-            {{ __('project__title') }}
-        </h2>
+        <h2 class="project__title">{{ __('project__title') }}</h2>
 
         <h3 class="project__subtitle">
             {{ __('project__subtitle_1') }}: {{ $allProjects->count() }}

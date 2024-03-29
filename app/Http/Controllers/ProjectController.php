@@ -13,7 +13,7 @@ class ProjectController extends Controller
     private readonly Collection $allProjects;
     private readonly Collection $ongoingProjects;
 
-    public function __construct() 
+    public function __construct()
     {
         $this->allProjects = Project::all();
         $this->ongoingProjects = $this->allProjects->where('finished_at', null);
@@ -29,7 +29,6 @@ class ProjectController extends Controller
     public function show(string $slug)
     {
         return view('pages.project.details', [
-            'photos' => Photo::all(),
             'testimonials' => Testimonial::all(),
             'project' => $this->allProjects->where('slug', $slug)->first(),
             'allProjects' => $this->allProjects,

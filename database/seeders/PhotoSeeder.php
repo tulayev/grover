@@ -16,42 +16,38 @@ class PhotoSeeder extends Seeder
         DB::table('photos')->insert(
             [
                 [
-                    'image' => 'gallery_1.png',
+                    'project_id' => 1,
+                    'image' => 'eco_sergeli_1.jpg',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],
                 [
-                    'image' => 'gallery_2.png',
+                    'project_id' => 1,
+                    'image' => 'eco_sergeli_2.jpg',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],
                 [
-                    'image' => 'gallery_3.png',
+                    'project_id' => 1,
+                    'image' => 'eco_sergeli_3.jpg',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],
                 [
-                    'image' => 'gallery_4.png',
+                    'project_id' => 1,
+                    'image' => 'eco_sergeli_4.jpg',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],
                 [
-                    'image' => 'gallery_5.png',
+                    'project_id' => 1,
+                    'image' => 'eco_sergeli_5.jpg',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],
                 [
-                    'image' => 'gallery_6.png',
-                    'created_at' => Carbon::now(),
-                    'updated_at' => Carbon::now(),
-                ],
-                [
-                    'image' => 'gallery_7.png',
-                    'created_at' => Carbon::now(),
-                    'updated_at' => Carbon::now(),
-                ],
-                [
-                    'image' => 'gallery_8.png',
+                    'project_id' => 1,
+                    'image' => 'eco_sergeli_6.jpg',
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ],

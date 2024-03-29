@@ -2,9 +2,7 @@
     <div class="uk-container uk-container-large">
         <h2 class="career__title">{{ __('career__title') }}</h2>
 
-        <h3 class="career__subtitle">
-            {!! __('career__subtitle') !!}
-        </h3>
+        <h3 class="career__subtitle">{!! __('career__subtitle') !!}</h3>
 
         <div class="career__vacations">
             <h4>{{ __('vacations__title') }}</h4>
@@ -36,7 +34,7 @@
 
         @php(
             $hr = $teamMembers->filter(function($member) {
-                return str_contains(strtolower($member->position), 'hr');
+                return str_contains(strtolower($member->getTranslation('position', 'en')), 'hr');
             })->first()
         )
         <div class="career__contact uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
@@ -47,7 +45,10 @@
                 <div>
                     <div class="career__contact-body" uk-grid>
                         <div class="uk-width-1-3">
-                            <img src="{{ asset('assets/img/gulchehra.png') }}" alt="{{ $hr->name }}" />
+                            <img
+                                src="{{ $hr->image ? asset('storage/' . $hr->image) : asset('assets/img/gulchehra.png') }}"
+                                alt="{{ $hr->name }}"
+                            />
                         </div>
                         <div class="uk-width-2-3">
                             <h3>{{ $hr->name }}</h3>

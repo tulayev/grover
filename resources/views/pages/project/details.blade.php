@@ -2,7 +2,7 @@
 
     <x-project.details.main :project="$project" />
 
-    <x-sections.photo :photos="$photos" />
+    <x-project.details.photo :project="$project" />
 
     <x-sections.dominant />
 

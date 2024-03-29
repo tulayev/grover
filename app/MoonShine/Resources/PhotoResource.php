@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Photo;
 
 use MoonShine\Resources\Resource;
+use MoonShine\Fields\BelongsTo;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
 use MoonShine\Actions\FiltersAction;
@@ -24,6 +25,7 @@ class PhotoResource extends Resource
                 ->dir('/') // The directory where the files will be stored in storage (by default /)
                 ->disk('public') // Filesystems disk
                 ->allowedExtensions(['jpg', 'gif', 'png']),
+            BelongsTo::make('Project', 'project_id', 'title'),
         ];
 	}
 

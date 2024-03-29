@@ -20,7 +20,7 @@
     {{ $slot }}
 
     <x-layout.contact />
-    
+
     <x-layout.footer />
 </body>
 </html>

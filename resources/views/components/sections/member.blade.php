@@ -5,8 +5,10 @@
             <div>
                 <div class="{{ $i % 3 == 2 ? 'team__card' : 'team__card team__card_first' }}">
                     <div class="team__card-title">
-                        {{-- <img src="{{ asset('storage/' . $member->image) }}" alt="{{ $member->name }}" /> --}}
-                        <img src="{{ asset('assets/img/sherzod.png') }}" alt="{{ $member->name }}" />
+                        <img
+                            src="{{ $member->image ? asset('storage/' . $member->image) : asset('assets/img/sherzod.png') }}"
+                            alt="{{ $member->name }}"
+                        />
                     </div>
                     <div class="team__card-body">
                         <h4>{{ $member->name }}</h4>
@@ -17,7 +19,7 @@
                                 <div>{{ $member->email }}</div>
                             </li>
                             <li class="uk-flex uk-flex-between">
-                                <div>Phone</div>
+                                <div>{{ __('contact_phone') }}</div>
                                 <div>{{ $member->phone }}</div>
                             </li>
                         </ul>

@@ -1,3 +1,16 @@
+@php
+    // Other data
+    $city1 = $settings->where('key', 'city')->first();
+    $address1 = $settings->where('key', 'address')->first();
+    $phone1 = $settings->where('key', 'phone')->first();
+    $email1 = $settings->where('key', 'email')->first();
+    $city2 = $settings->where('key', 'city')->last();
+    $address2 = $settings->where('key', 'address')->last();
+    $phone2 = $settings->where('key', 'phone')->last();
+    $email2 = $settings->where('key', 'email')->last();
+    $map = $settings->where('key', 'map')->first();
+@endphp
+
 <main class="info">
     <div class="uk-container uk-container-large">
         <h1 class="info__title">
@@ -7,40 +20,40 @@
             <div>
                 <div class="info__address uk-child-width-1-1" uk-grid>
                     <div>
-                        @if ($settings->where('key', 'city')->first()->value)
-                            <h2>{{ $settings->where('key', 'city')->first()->value }}</h2>
+                        @if ($city1)
+                            <h2>{{ $city1->value }}</h2>
                         @endif
-                        @if ($settings->where('key', 'address')->first()->value)
-                            <p>{{ $settings->where('key', 'address')->first()->value }}</p>
+                        @if ($address1)
+                            <p>{{ $address1->value }}</p>
                         @endif
-                        @if ($settings->where('key', 'phone')->first()->url)
-                            <p>{{ $settings->where('key', 'phone')->first()->url }}</p>
+                        @if ($phone1)
+                            <p>{{ $phone1->url }}</p>
                         @endif
-                        @if ($settings->where('key', 'email')->first()->url)
-                            <p>{{ $settings->where('key', 'email')->first()->url }}</p>
+                        @if ($email1)
+                            <p>{{ $email1->url }}</p>
                         @endif
                     </div>
                     <div>
-                        @if ($settings->where('key', 'city')->last()->value)
-                            <h2>{{ $settings->where('key', 'city')->last()->value }}</h2>
+                        @if ($city2)
+                            <h2>{{ $city2->value }}</h2>
                         @endif
-                        @if ($settings->where('key', 'address')->last()->value)
-                            <p>{{ $settings->where('key', 'address')->last()->value }}</p>
+                        @if ($address2)
+                            <p>{{ $address2->value }}</p>
                         @endif
-                        @if ($settings->where('key', 'phone')->last()->url)
-                            <p>{{ $settings->where('key', 'phone')->last()->url }}</p>
+                        @if ($phone2)
+                            <p>{{ $phone2->url }}</p>
                         @endif
-                        @if ($settings->where('key', 'email')->last()->url)
-                            <p>{{ $settings->where('key', 'email')->last()->url }}</p>
+                        @if ($email2)
+                            <p>{{ $email2->url }}</p>
                         @endif
                     </div>
                 </div>
             </div>
             <div>
                 <div class="info__map">
-                    @if ($settings->where('key', 'map')->first()->url)
+                    @if ($map)
                         <iframe
-                            src="{{ $settings->where('key', 'map')->first()->url }}"
+                            src="{{ $map->url }}"
                             width="600"
                             height="450"
                             style="border:0;"

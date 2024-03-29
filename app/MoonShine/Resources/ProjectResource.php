@@ -5,10 +5,11 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Project;
 
+use MoonShine\Fields\Text;
 use MoonShine\Resources\Resource;
 use MoonShine\Fields\ID;
 use VI\MoonShineSpatieTranslatable\Fields\Translatable;
-use MoonShine\CKEditor\Fields\CKEditor; 
+use MoonShine\CKEditor\Fields\CKEditor;
 use MoonShine\Fields\Date;
 use MoonShine\Fields\Image;
 use MoonShine\Actions\FiltersAction;
@@ -23,16 +24,10 @@ class ProjectResource extends Resource
 	{
 		return [
 		    ID::make()->sortable(),
-            Translatable::make('Title', 'title')
-                ->priorityLanguages(array_keys(config('locales')))
-                ->removable(),
-            CKEditor::make('Description', 'description'), 
+            Text::make('Title', 'title'),
+            CKEditor::make('Description', 'description'),
             Date::make('Finished date', 'finished_at')
                 ->format('d.m.Y'),
-            Image::make('Image', 'image')
-                ->dir('/') // The directory where the files will be stored in storage (by default /)
-                ->disk('public') // Filesystems disk
-                ->allowedExtensions(['jpg', 'gif', 'png']),
         ];
 	}
 
