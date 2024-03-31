@@ -9,7 +9,7 @@
             @foreach ($testimonials as $testimonial)
                 <div class="testimonial__slide">
                     <h4>{{ $testimonial->author }}</h4>
-                    <p>{{ $testimonial->text }}</p>
+                    <p>{!! $testimonial->text !!}</p>
                 </div>
             @endforeach
         @endif
