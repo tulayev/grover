@@ -18,7 +18,9 @@ class HomeController extends Controller
             'allProjects' => $allProjects,
             'ongoingProjects' => $ongoingProjects,
             'testimonials' => Testimonial::all(),
-            'teamMembers' => Member::take(3)->get(),
+            'teamMembers' => Member::all()->filter(static fn ($member) =>
+                !str_contains(strtolower($member->getTranslation('position', 'en')), 'ceo'))
+                ->take(3),
         ]);
     }
 }

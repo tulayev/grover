@@ -20,5 +20,7 @@
                 </div>
             </div>
         </div>
+
+        <x-sections.member :teamMembers="$ceo" />
     </div>
 </main>

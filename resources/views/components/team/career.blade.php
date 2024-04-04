@@ -33,9 +33,9 @@
         </div>
 
         @php(
-            $hr = $teamMembers->filter(function($member) {
-                return str_contains(strtolower($member->getTranslation('position', 'en')), 'hr');
-            })->first()
+            $hr = $teamMembers
+                ->filter(static fn($member) => str_contains(strtolower($member->getTranslation('position', 'en')), 'hr'))
+                ->first()
         )
         <div class="career__contact uk-child-width-1-1 uk-child-width-1-2@s" uk-grid>
             @if ($hr)
