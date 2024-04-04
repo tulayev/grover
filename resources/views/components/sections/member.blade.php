@@ -22,10 +22,6 @@
                                 <div>{{ __('contact_phone') }}</div>
                                 <div>{{ $ceo->phone }}</div>
                             </li>
-                            <li class="uk-flex uk-flex-between">
-                                <div>About</div>
-                                <div>{{ __('about_ceo') }}</div>
-                            </li>
                         </ul>
                     </div>
                 </div>

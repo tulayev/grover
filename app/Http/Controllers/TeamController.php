@@ -12,8 +12,7 @@ class TeamController extends Controller
     {
         return view('pages.team', [
             'teamMembers' => Member::all()->filter(static fn ($member) =>
-            !str_contains(strtolower($member->getTranslation('position', 'en')), 'ceo'))
-                ->take(3),
+                !str_contains(strtolower($member->getTranslation('position', 'en')), 'ceo')),
             'vacations' => Vacation::all(),
         ]);
     }
